@@ -1,0 +1,29 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12/09/2019, 02:12:00
+    Author     : Thiago
+*/
+
+
+input.estado {
+    text-transform: uppercase;
+}
+input.estado:-ms-input-placeholder {
+    text-transform: none;
+}
+input.estado::placeholder {
+    text-transform: none;
+}
+
+input.reformulado {
+    width: 14%;
+    margin-bottom: 8px;
+}
+
+input {
+    border-radius: 4px;
+}

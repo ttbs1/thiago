@@ -1,0 +1,83 @@
+
+.scrumboard{
+	margin:0 auto;
+        padding: 2em;
+        min-width: 850px;
+}
+h1{
+        position: static;
+	margin-left:20px;
+	font-size:2rem;
+}
+  .column {
+    padding: 1em 0em 0em 1em;
+    margin: 0 1em 1em 1em;
+    width: 240px;
+    float: left;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+		border: solid 4px black;
+                min-height: 8em;
+		height:min-content;
+                background-color: whitesmoke;
+  }
+  
+  .header {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding: 1em 0em 0.3em 0em;
+    margin: 1em 1em 0 1em;
+    width: 240px;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+		border-top: solid 4px black;
+                border-left: solid 4px black;
+                border-right: solid 4px black;
+		height:auto;
+  }
+  
+  .portlet {
+    background-color: white;
+    border: solid 0.5px gray;
+    border-radius: 8px;
+    margin: 0 1em 1em 0;
+    padding: 0.6em;
+  }
+  .portlet-header {
+    cursor: grab;
+    padding: 0.5em 0.4em;
+    position: static;
+    text-align: right;
+    background-color: lightgray;
+    font-size: large;
+    font-weight: bold;
+  }
+  .portlet-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -8px;
+  }
+  .portlet-content {
+    font-size: large;
+    padding: 0.4em;
+    background-color: rgb(255,255,218);
+    min-height: 4em;
+  }
+  .portlet-footer {
+        text-align: right;
+        padding: 0em 0.4em 0.2em 0em;
+        background-color: rgb(255,255,218);
+        font-size: small;
+  }
+  
+  .portlet-placeholder {
+    border: 1px dotted black;
+    margin: 0 1em 1em 0;
+    height: 50px;
+  }
+  
+  .portlet-icon {
+      color: black;
+  }
