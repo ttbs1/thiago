@@ -1,5 +1,5 @@
 
-window.onload = function() {
+function getSizes() {
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     var element = document.getElementById('navbar');
     var navbarItens = document.getElementById("navbar-itens");
