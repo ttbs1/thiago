@@ -8,8 +8,27 @@ and open the template in the editor.
     Author     : Thiago
 */
 
+.load {
+    color:#fff;
+    font-size: 18px;
+    padding: calc(50vh - 45px);
+    height: calc(100vh - 50px);
+    text-align: center;
+}
+
+#inicio {
+    display: none;
+}
 
 #sobre {
+    display: none;
+}
+
+#navbar-toggle {
+    display: none;
+}
+
+#navbar-itens {
     display: none;
 }
 
@@ -21,11 +40,11 @@ font-family: 'sketch';
 
 .content {
     padding-top: 100px;
-    color: #fff;
+    color: #fff !important;
     text-align: center;
     opacity: 1;
     transition: opacity .5s linear;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 li {
@@ -61,20 +80,32 @@ body {
     font-size: 18px;
 }
 
-.fas:hover #teste {
+.fas:hover #tampa {
+    color: orange;
     transform: rotate(-25deg) translate(-2.4px,-0.5px);
     transition-duration: 1s;
 }
 
-.fas #escrita {
-    //color: orangered;
-    //transform: translate (-10px);
+.fas:hover #recipiente {
+    color: orange;
+    transition-duration: 1s;
+}
+
+.fas:hover #borda {
+    color: orange;
+    transition-duration: 1s;
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: #fff;
 }
 
 .fas:hover #cabeca {
     opacity: 0;
     transition-duration: 0.5s;
 }
+
 .fas:hover #corpo {
     opacity: 0;
     transition-duration: 0.5s;
