@@ -30,6 +30,14 @@ and open the template in the editor.
     display: none;
 }
 
+.floating-text {
+    padding: 4%;
+    border-radius: 20px;
+    text-align: justify;
+    background: rgba(245, 130, 32, 0.45);
+    background: rgba(105, 105, 105, 0.91);
+}
+
 .content {
     padding-top: 100px;
     padding-bottom: 100px;
