@@ -19,8 +19,6 @@ and open the template in the editor.
         <script src="util/bootstrap 5/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 
         <script src="util/links/fontisawesome.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="util/wow_js/animate.css" />
 
@@ -35,14 +33,20 @@ and open the template in the editor.
         <nav class="container-fluid" id="navbar" style="background-color: #2b2b2b; height: 50px; color: #fff">
             <div class="row justify-content-between">
                 <div class="col-auto">
-                    logo
+                    <a href="javascript:;" onclick="toggleHome()">Logo</a>
                 </div>
                 <div id="navbar-itens" class="col-auto">
                     <li>
-                        <a href="javascript:;" onclick="toggleHome()">Home</a>
+                        <a href="javascript:;" onclick="toggleAbout()">Sobre</a>
                     </li>
                     <li>
-                        <a href="javascript:;" onclick="toggleAbout()">Sobre</a>
+                        <a href="javascript:;" onclick="toggleJobs()">Trabalhos</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" onclick="toggleContact()">Contato</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" onclick="togglePlans()">Planos</a>
                     </li>
                 </div>
                 <div id="navbar-toggle" class="col-auto" style="text-align: right">
@@ -66,18 +70,7 @@ and open the template in the editor.
                 </div>
                 <br>
                 <br>
-                <div class="row justify-content-center">
-                    <div  class="fas col-sm-2">
-                        <a href="javascript:;" onclick="">
-                            <div>
-                                <svg width="2.7em" height="2.7em" viewBox="-4 -4 24 24" class="bi bi-wallet-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path id="tampa" d="M1.5 2A1.5 1.5 0 0 0 0 3.5v2h6a.5.5 0 0 1 .5.5c0 .253.08.644.306.958.207.288.557.542 1.194.542.637 0 .987-.254 1.194-.542.226-.314.306-.705.306-.958a.5.5 0 0 1 .5-.5h6v-2A1.5 1.5 0 0 0 14.5 2h-13z"/>
-                                    <path id="recipiente" d="M16 6.5h-5.551a2.678 2.678 0 0 1-.443 1.042C9.613 8.088 8.963 8.5 8 8.5c-.963 0-1.613-.412-2.006-.958A2.679 2.679 0 0 1 5.551 6.5H0v6A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-6z"/>
-                                </svg>
-                                Trabalhos recentes
-                            </div>
-                        </a>
-                    </div>
+                <div class="row justify-content-center" style="margin-top: 50px;">
                     <div class="fas col-sm-2">
                         <a href="javascript:;" onclick="toggleAbout()">
                             <div>
@@ -93,37 +86,107 @@ and open the template in the editor.
                             </div>
                         </a>
                     </div>
-                    <div class="fas col-sm-2">
-                        <svg width="2.7em" height="2.7em" viewBox="-4 -4 24 24" class="bi bi-wallet-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path id="tampa" d="M1.5 2A1.5 1.5 0 0 0 0 3.5v2h6a.5.5 0 0 1 .5.5c0 .253.08.644.306.958.207.288.557.542 1.194.542.637 0 .987-.254 1.194-.542.226-.314.306-.705.306-.958a.5.5 0 0 1 .5-.5h6v-2A1.5 1.5 0 0 0 14.5 2h-13z"/>
-                            
-                            <path id="recipiente" d="M16 6.5h-5.551a2.678 2.678 0 0 1-.443 1.042C9.613 8.088 8.963 8.5 8 8.5c-.963 0-1.613-.412-2.006-.958A2.679 2.679 0 0 1 5.551 6.5H0v6A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-6z"/>
-                        </svg>
-                        Trabalhos recentes
+                    <div  class="fas col-sm-2">
+                        <a href="javascript:;" onclick="toggleJobs();">
+                            <div>
+                                <svg width="2.7em" height="2.7em" viewBox="-4 -4 24 24" class="bi bi-wallet-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path id="tampa" d="M1.5 2A1.5 1.5 0 0 0 0 3.5v2h6a.5.5 0 0 1 .5.5c0 .253.08.644.306.958.207.288.557.542 1.194.542.637 0 .987-.254 1.194-.542.226-.314.306-.705.306-.958a.5.5 0 0 1 .5-.5h6v-2A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                                    <path id="recipiente" d="M16 6.5h-5.551a2.678 2.678 0 0 1-.443 1.042C9.613 8.088 8.963 8.5 8 8.5c-.963 0-1.613-.412-2.006-.958A2.679 2.679 0 0 1 5.551 6.5H0v6A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-6z"/>
+                                </svg>
+                                Trabalhos
+                            </div>
+                        </a>
                     </div>
                     <div class="fas col-sm-2">
-                        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-file-earmark-text" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path id="borda" d="M4 0h5.5v1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h1V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/>
-                            <path id="borda" d="M9.5 3V0L14 4.5h-3A1.5 1.5 0 0 1 9.5 3z"/>
-                            <path id="escrita" fill-rule="evenodd" d="M-6 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+                        <a href="javascript:;" onclick="toggleContact()">
+                            <div>
+                                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-file-earmark-text" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path id="borda" d="M4 0h5.5v1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h1V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/>
+                                <path id="borda" d="M9.5 3V0L14 4.5h-3A1.5 1.5 0 0 1 9.5 3z"/>
+                                <path id="escrita" fill-rule="evenodd" d="M-6 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
 
-                            <path id="cabeca" fill-rule="evenodd" d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                            <path id="corpo" d="M8 12c4 0 5 1.755 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12z"/>
-                        </svg>
-                        Sobre
+                                <path id="cabeca" fill-rule="evenodd" d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                <path id="corpo" d="M8 12c4 0 5 1.755 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12z"/>
+                                </svg>
+                                Contato
+                            </div>
+                        </a>
+                    </div>
+                    <div  class="fas col-sm-2">
+                        <a href="javascript:;" onclick="togglePlans();">
+                            <div>
+                                <svg width="2.7em" height="2.7em" viewBox="-4 -4 24 24" class="bi bi-wallet-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path id="tampa" d="M1.5 2A1.5 1.5 0 0 0 0 3.5v2h6a.5.5 0 0 1 .5.5c0 .253.08.644.306.958.207.288.557.542 1.194.542.637 0 .987-.254 1.194-.542.226-.314.306-.705.306-.958a.5.5 0 0 1 .5-.5h6v-2A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                                    <path id="recipiente" d="M16 6.5h-5.551a2.678 2.678 0 0 1-.443 1.042C9.613 8.088 8.963 8.5 8 8.5c-.963 0-1.613-.412-2.006-.958A2.679 2.679 0 0 1 5.551 6.5H0v6A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-6z"/>
+                                </svg>
+                                Planos
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </main>
+        
         <main id="sobre" class="container-fluid content">
-            <div class="row">
-                <div class="col align-self-center">
+            <div class="row justify-content-center">
+                <div class="col-auto">
                     <h1>Sobre</h1><br>
-                <div>
-                    <iframe width="640" height="360" src="https://www.youtube.com/embed/rvc5mRATQ7c?controls=0" frameborder="0" allow="" allowfullscreen style="max-width: 100%"></iframe>
-                </div>
+                    <div style="max-width: 740px; text-align: justify;">
+                        &nbsp; &nbsp; &nbsp; &nbsp; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. <br><br>
+                        
+                        &nbsp; &nbsp; &nbsp; &nbsp; It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                    </div>
                 </div>
             </div>
         </main>
+        
+        <main id="trabalhos" class="container-fluid content">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <h1>Trabalhos</h1><br>
+                    <div>
+                        <iframe width="640" height="360" src="https://www.youtube.com/embed/rvc5mRATQ7c?controls=0" frameborder="0" allow="" allowfullscreen style="max-width: 100%"></iframe>
+                    </div>
+                    <div style="padding: 50px 0 50px 0; max-width: 740px; text-align: justify;">
+                        &nbsp; &nbsp; &nbsp; &nbsp; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </div>
+                    <div>
+                        <iframe width="640" height="360" src="https://www.youtube.com/embed/lTRiuFIWV54?controls=0" frameborder="0" allow="" allowfullscreen style="max-width: 100%"></iframe>
+                    </div>
+                    <div style="padding-top: 50px; max-width: 740px; text-align: justify;">
+                        &nbsp; &nbsp; &nbsp; &nbsp; It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <main id="contato" class="container-fluid content">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <h1>Contato</h1><br>
+                    <div>
+                        <iframe width="640" height="360" src="https://www.youtube.com/embed/rvc5mRATQ7c?controls=0" frameborder="0" allow="" allowfullscreen style="max-width: 100%"></iframe>
+                    </div>
+                    <div style="padding-top: 50px; max-width: 740px; text-align: justify;">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <main id="planos" class="container-fluid content">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <h1>Planos</h1><br>
+                    <div>
+                        <iframe width="640" height="360" src="https://www.youtube.com/embed/rvc5mRATQ7c?controls=0" frameborder="0" allow="" allowfullscreen style="max-width: 100%"></iframe>
+                    </div>
+                    <div style="padding-top: 50px; max-width: 740px; text-align: justify;">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </div>
+                </div>
+            </div>
+        </main>
+        
     </body>
 </html>

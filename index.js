@@ -21,12 +21,30 @@ function getSizes() {
     about.style.height = window.innerHeight - 50+"px";
     about.style.display = "none";
     
+    var trabalhos = document.getElementById("trabalhos");
+    trabalhos.style.height = window.innerHeight - 50+"px";
+    trabalhos.style.display = "none";
+    var contato = document.getElementById("contato");
+    contato.style.height = window.innerHeight - 50+"px";
+    contato.style.display = "none";
+    var planos = document.getElementById("planos");
+    planos.style.height = window.innerHeight - 50+"px";
+    planos.style.display = "none";
+    
 };
 
 function toggleHome () {
-    document.getElementById("sobre").classList.add("hide");
+    var sobre = document.getElementById("sobre");
+    sobre.classList.add("hide");
+    var trabalhos = document.getElementById("trabalhos");
+    trabalhos.classList.add("hide");
+    var contato = document.getElementById("contato");
+    contato.classList.add("hide");
     setTimeout(function () {
-        document.getElementById("sobre").style.display = "none";
+        contato.style.display = "none";
+        trabalhos.style.display = "none";
+        sobre.style.display = "none";
+        planos.style.display = "none";
         document.getElementById("inicio").classList.add("hide");
         document.getElementById("inicio").style.display = "block";
         setTimeout(function () {
@@ -36,13 +54,89 @@ function toggleHome () {
 };
 
 function toggleAbout () {
-    document.getElementById("inicio").classList.add("hide");
+    var inicio = document.getElementById("inicio");
+    inicio.classList.add("hide");
+    var trabalhos = document.getElementById("trabalhos");
+    trabalhos.classList.add("hide");
+    var contato = document.getElementById("contato");
+    contato.classList.add("hide");
     setTimeout(function () {
-        document.getElementById("inicio").style.display = "none";
-        document.getElementById("sobre").classList.add("hide");
-        document.getElementById("sobre").style.display = "block";
+        contato.style.display = "none";
+        trabalhos.style.display = "none";
+        inicio.style.display = "none";
+        planos.style.display = "none";
+        var sobre = document.getElementById("sobre");
+        sobre.classList.add("hide");
+        sobre.style.display = "block";
         setTimeout(function () {
-            document.getElementById("sobre").classList.remove("hide");
+            sobre.classList.remove("hide");
+        }, 500);
+    }, 500);
+};
+
+function toggleJobs () {
+    var inicio = document.getElementById("inicio");
+    inicio.classList.add("hide");
+    var sobre = document.getElementById("sobre");
+    sobre.classList.add("hide");
+    var contato = document.getElementById("contato");
+    contato.classList.add("hide");
+    setTimeout(function () {
+        contato.style.display = "none";
+        sobre.style.display = "none";
+        inicio.style.display = "none";
+        planos.style.display = "none";
+        var trabalhos = document.getElementById("trabalhos");
+        trabalhos.classList.add("hide");
+        trabalhos.style.display = "block";
+        setTimeout(function () {
+            trabalhos.classList.remove("hide");
+        }, 500);
+    }, 500);
+};
+
+function toggleContact () {
+    var inicio = document.getElementById("inicio");
+    inicio.classList.add("hide");
+    var sobre = document.getElementById("sobre");
+    sobre.classList.add("hide");
+    var trabalhos = document.getElementById("trabalhos");
+    trabalhos.classList.add("hide");
+    var planos = document.getElementById("planos");
+    planos.classList.add("hide");
+    setTimeout(function () {
+        trabalhos.style.display = "none";
+        sobre.style.display = "none";
+        inicio.style.display = "none";
+        planos.style.display = "none";
+        var contato = document.getElementById("contato");
+        contato.classList.add("hide");
+        contato.style.display = "block";
+        setTimeout(function () {
+            contato.classList.remove("hide");
+        }, 500);
+    }, 500);
+};
+
+function togglePlans () {
+    var inicio = document.getElementById("inicio");
+    inicio.classList.add("hide");
+    var sobre = document.getElementById("sobre");
+    sobre.classList.add("hide");
+    var trabalhos = document.getElementById("trabalhos");
+    trabalhos.classList.add("hide");
+    var contato = document.getElementById("contato");
+    contato.classList.add("hide");
+    setTimeout(function () {
+        trabalhos.style.display = "none";
+        sobre.style.display = "none";
+        inicio.style.display = "none";
+        contato.style.display = "none";
+        var planos = document.getElementById("planos");
+        planos.classList.add("hide");
+        planos.style.display = "block";
+        setTimeout(function () {
+            planos.classList.remove("hide");
         }, 500);
     }, 500);
 };
