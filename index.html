@@ -72,7 +72,7 @@ and open the template in the editor.
                 <br>
                 <div class="row justify-content-center" style="margin-top: 50px;">
                     <div class="fas col-sm-2">
-                        <a href="javascript:;" onclick="toggleAbout()">
+                        <a href="javascript:;" onclick="toggleAbout()" class="main-menu">
                             <div>
                                 <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-file-earmark-text" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path id="borda" d="M4 0h5.5v1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h1V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/>
@@ -87,7 +87,7 @@ and open the template in the editor.
                         </a>
                     </div>
                     <div  class="fas col-sm-2">
-                        <a href="javascript:;" onclick="toggleJobs();">
+                        <a href="javascript:;" onclick="toggleJobs();" class="main-menu">
                             <div>
                                 <svg width="2.7em" height="2.7em" viewBox="-4 -4 24 24" class="bi bi-wallet-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path id="tampa" d="M1.5 2A1.5 1.5 0 0 0 0 3.5v2h6a.5.5 0 0 1 .5.5c0 .253.08.644.306.958.207.288.557.542 1.194.542.637 0 .987-.254 1.194-.542.226-.314.306-.705.306-.958a.5.5 0 0 1 .5-.5h6v-2A1.5 1.5 0 0 0 14.5 2h-13z"/>
@@ -98,7 +98,7 @@ and open the template in the editor.
                         </a>
                     </div>
                     <div class="fas col-sm-2">
-                        <a href="javascript:;" onclick="toggleContact()">
+                        <a href="javascript:;" onclick="toggleContact()" class="main-menu">
                             <div>
                                 <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-file-earmark-text" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path id="borda" d="M4 0h5.5v1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h1V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/>
@@ -113,7 +113,7 @@ and open the template in the editor.
                         </a>
                     </div>
                     <div  class="fas col-sm-2">
-                        <a href="javascript:;" onclick="togglePlans();">
+                        <a href="javascript:;" onclick="togglePlans();" class="main-menu">
                             <div>
                                 <svg width="2.7em" height="2.7em" viewBox="-4 -4 24 24" class="bi bi-wallet-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path id="tampa" d="M1.5 2A1.5 1.5 0 0 0 0 3.5v2h6a.5.5 0 0 1 .5.5c0 .253.08.644.306.958.207.288.557.542 1.194.542.637 0 .987-.254 1.194-.542.226-.314.306-.705.306-.958a.5.5 0 0 1 .5-.5h6v-2A1.5 1.5 0 0 0 14.5 2h-13z"/>
@@ -165,12 +165,14 @@ and open the template in the editor.
                 <div class="col-sm-8 align-self-center">
                     <div class="container-sm floating-text">
                         <h1>Contato</h1>
-                        <a href="https://fb.me/ttbs2" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
-                        <a href="https://www.instagram.com/ttbs1" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-                        <a href="https://www.github.com/ttbs1" target="_blank"><i class="fab fa-github"></i> Github</a>
-                        <a href="mailto:thiagotuliobs@gmail.com"><i class="far fa-paper-plane"></i> E-mail</a>
-                        <a href="https://api.whatsapp.com/send?phone=5537988434097" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a>
-                        <a href="tel:5537988434097"><i class="far fa-address-card"></i> Phone</a>
+                        <div class="row justify-content-between">
+                            <div class="col"><a href="tel:5537988434097"><i class="far fa-address-card"></i> Phone</a></div>
+                            <div class="col"><a href="mailto:thiagotuliobs@gmail.com"><i class="far fa-paper-plane"></i> E-mail</a></div>
+                            <div class="col"><a href="https://www.github.com/ttbs1" target="_blank"><i class="fab fa-github"></i>  Github</a></div>
+                            <div class="col"><a href="https://api.whatsapp.com/send?phone=5537988434097" target="_blank"><i class="fab fa-whatsapp"></i> Whatsapp</a></div>
+                            <div class="col"><a href="https://fb.me/ttbs2" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a></div>
+                            <div class="col"><a href="https://www.instagram.com/ttbs1" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -190,13 +192,55 @@ and open the template in the editor.
         -->
         <main id="planos" class="container-fluid content">
             <div class="row justify-content-center">
-                <div class="col-auto">
-                    <h1>Planos</h1><br>
-                    <div>
-                        <iframe width="640" height="360" src="https://www.youtube.com/embed/rvc5mRATQ7c?controls=0" frameborder="0" allow="" allowfullscreen style="max-width: 100%"></iframe>
+                <div style="height: 300px; width:300px; margin: 0.8rem 2rem 0.8rem 0.8rem ">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="img/site.png" alt="Site" style="width:300px;height:300px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Plano web 1</h1>
+                                <p>Funcionalidade 1</p>
+                                <p>Funcionalidade 2</p>
+                                <p>Funcionalidade 3</p>
+                                <p>Funcionalidade 4</p>
+                                <button type="button" class="btn btn-secondary">Contratar</button>
+                            </div>
+                        </div>
                     </div>
-                    <div style="padding-top: 50px; max-width: 740px; text-align: justify;">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+                <div style="height: 300px; width:300px; margin: 0.8rem 2rem 0.8rem 0.8rem ">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="img/site2.png" alt="Site" style="width:300px;height:300px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Plano web 2</h1>
+                                <p>Funcionalidade 1</p>
+                                <p>Funcionalidade 2</p>
+                                <p>Funcionalidade 3</p>
+                                <p>Funcionalidade 4</p>
+                                <button type="button" class="btn btn-secondary">Contratar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="height: 300px; width:300px; margin: 0.8rem 2rem 0.8rem 0.8rem ">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="img/aplicacao.png" alt="Site" style="width:300px;height:300px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Aplicacao web</h1>
+                                <p>Funcionalidade 1</p>
+                                <p>Funcionalidade 2</p>
+                                <p>Funcionalidade 3</p>
+                                <p>&nbsp;</p>
+                                <button type="button" class="btn btn-secondary">Contratar</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

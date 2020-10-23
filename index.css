@@ -36,6 +36,7 @@ and open the template in the editor.
     text-align: justify;
     background: rgba(245, 130, 32, 0.45);
     background: rgba(105, 105, 105, 0.91);
+    color: #fff;
 }
 
 .content {
@@ -46,6 +47,15 @@ and open the template in the editor.
     opacity: 1;
     transition: opacity .5s linear;
     overflow-y: auto;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: orange;
 }
 
 li {
@@ -98,7 +108,7 @@ body {
     transition-duration: 1s;
 }
 
-a, a:hover {
+.main-menu, .main-menu:hover {
     text-decoration: none;
     color: #fff;
 }
@@ -152,3 +162,57 @@ a, a:hover {
 
 
 Resources
+
+
+/* FLIP CARD HERE */
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    padding-top: 1.4rem;
+    background-color: #2b2b2b;
+    color: darkorange;
+    transform: rotateY(180deg);
+    border: solid;
+    border-color: black;
+}
+
+/* FLIP CARD END  */
