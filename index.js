@@ -141,6 +141,15 @@ function togglePlans () {
     }, 500);
 };
 
+function switchDM () {
+    var dm = document.getElementById("flexSwitchCheckDefault");
+    var html = document.getElementsByTagName("html");
+    if(dm.checked)
+        html[0].classList.add("dark-mode");
+    else
+        html[0].classList.remove("dark-mode");
+};
+
 
 
 

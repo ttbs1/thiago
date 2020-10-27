@@ -10,8 +10,24 @@ and open the template in the editor.
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+:root {
+  --body-bg: radial-gradient(farthest-corner at 2% 2%, #ffffff, #fffafa, #f3f3f3, #f6f6f6, #f9f9f9, #e6e6e6);
+  --body-color: #808080;
+  --link-color: #fff;
+  --link-color-hover: orange;
+  --card-color: #c0c0c0;
+}
+
+.dark-mode:root {
+  --body-bg: radial-gradient(farthest-corner at 2% 2%, #4c4c4c, #494949, #3f3f3f, #363636, #303030, #2b2b2b);
+  --body-color: #f3f3f3;
+  --link-color: #f3f3f3;
+  --link-color-hover: orange;
+  --card-color: #282828;
+}
+
 .load {
-    color:#fff;
+    //color:#fff;
     font-size: 18px;
     padding-top: calc(50vh - 45px);
     height: calc(100vh - 50px);
@@ -36,13 +52,13 @@ and open the template in the editor.
     text-align: justify;
     background: rgba(245, 130, 32, 0.45);
     background: rgba(105, 105, 105, 0.91);
-    color: #fff;
+    //color: #fff;
 }
 
 .content {
     padding-top: 100px;
     padding-bottom: 100px;
-    color: #fff !important;
+    //color: #fff !important;
     text-align: center;
     opacity: 1;
     transition: opacity .5s linear;
@@ -50,12 +66,12 @@ and open the template in the editor.
 }
 
 a {
-    color: #fff;
+    color: var(--link-color);
     text-decoration: none;
 }
 
 a:hover {
-    color: orange;
+    color: var(--link-color-hover);
 }
 
 li {
@@ -80,7 +96,8 @@ html{
 }
 
 body {
-    background-image: radial-gradient(farthest-corner at 2% 2%, #4c4c4c, #494949, #3f3f3f, #363636, #303030, #2b2b2b);
+    background-image: var(--body-bg);
+    color: var(--body-color);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -101,24 +118,24 @@ body {
 }
 
 .fas:hover #tampa {
-    color: orange;
+    color: var(--link-color-hover);
     transform: rotate(-25deg) translate(-2.4px,-0.5px);
     transition-duration: 1s;
 }
 
 .fas:hover #recipiente {
-    color: orange;
+    color: var(--link-color-hover);
     transition-duration: 1s;
 }
 
 .fas:hover #borda {
-    color: orange;
+    color: var(--link-color-hover);
     transition-duration: 1s;
 }
 
 .main-menu, .main-menu:hover {
     text-decoration: none;
-    color: #fff;
+    color: var(--body-color);
 }
 
 .fas:hover #cabeca {
@@ -147,7 +164,7 @@ body {
 }
 
 .fas:hover #cart2 {
-    color: orange;
+    color: var(--link-color-hover);
     transform: translateX(0px);
     transition-delay: 1s;
     transition-duration: 1.5s;
@@ -168,7 +185,7 @@ body {
 
 .fas:hover #tel2 {
     opacity: 1;
-    color: orange;
+    color: var(--link-color-hover);
     transition-duration: 2s;
   -webkit-animation: vibrate 2s cubic-bezier(.36, .07, .19, .97) infinite;
   animation: vibrate 2s cubic-bezier(.36, .07, .19, .97) infinite;
@@ -204,10 +221,10 @@ body {
 
 /* DEMO-SPECIFIC STYLES */
 .typewriter h1 {
-  color: #fff;
+  color: var(--body-color);
   font-family: "Roboto";
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
+  border-right: .15em solid var(--link-color-hover); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
@@ -225,10 +242,13 @@ body {
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: orange }
+  50% { border-color: var(--link-color-hover) }
 }
 
-
+#dark-mode-switch {
+    margin: 6px;
+    position: absolute;
+}
 
 Resources
 
@@ -277,8 +297,8 @@ Resources
 /* Style the back side */
 .flip-card-back {
     padding-top: 1.4rem;
-    background-color: #2b2b2b;
-    color: darkorange;
+    background-color: var(--card-color);
+    color: var(--link-color-hover);
     transform: rotateY(180deg);
     border: solid;
     border-color: black;
