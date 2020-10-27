@@ -26,27 +26,33 @@ and open the template in the editor.
 
         <script src="util/PreloadJS-master/examples.js"></script>
         <script src="index.js"></script>
+        
+        
+
+        <script src="util/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="util/validationForm.js"></script>
+        <script type="text/javascript" src="util/jquery.mask.js"></script>
 
 
     </head>
     <body onload="getSizes();">
-        <nav class="container-fluid" id="navbar" style="background-color: #2b2b2b; height: 50px; color: #fff">
+        <nav class="container-fluid navbar" id="navbar" style="background-color: #2b2b2b; height: 50px;">
             <div class="row justify-content-between">
                 <div class="col-auto">
                     <a href="javascript:;" onclick="toggleHome()">Logo</a>
                 </div>
-                <div id="navbar-itens" class="col-auto">
+                <div id="navbar-itens" class="col-auto" style="height: 100%;">
                     <li>
-                        <a href="javascript:;" onclick="toggleAbout()">Sobre</a>
+                        <a class="nav-item" href="javascript:;" onclick="toggleAbout()">Sobre</a>
                     </li>
                     <li>
-                        <a href="javascript:;" onclick="toggleJobs()">Trabalhos</a>
+                        <a class="nav-item" href="javascript:;" onclick="toggleJobs()">Trabalhos</a>
                     </li>
                     <li>
-                        <a href="javascript:;" onclick="toggleContact()">Contato</a>
+                        <a class="nav-item" href="javascript:;" onclick="toggleContact()">Contato</a>
                     </li>
                     <li>
-                        <a href="javascript:;" onclick="togglePlans()">Planos</a>
+                        <a class="nav-item" href="javascript:;" onclick="togglePlans()" onmouseover="hoverPlans()">Planos</a>
                     </li>
                 </div>
                 <div id="navbar-toggle" class="col-auto" style="text-align: right">
@@ -169,6 +175,77 @@ and open the template in the editor.
                 <div class="col-sm-8 align-self-center">
                     <div class="container-sm floating-text">
                         <h1>Contato</h1>
+                        <div class="row" style="margin: 1em 0 1em 0">
+                            <div class="col-sm-6 landing-text">
+                                Alguma dúvida? <br>Entre em contato e vamos esclarecer tudo!
+                            </div>
+                            <div class="col-sm-6">
+                            <form id="contact-form" class="form-horizontal needs-validation formulario" novalidate action="JavaScript:sendMail();">
+                                <fieldset>
+
+                                    <div class="form-group col-md-12">
+                                        <label class="col-form-label" for="name">Nome: </label>
+                                        <input class="form-control name" type="text" required name="name" id="name" placeholder="Nome" value="" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ][A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s*?]{3,50}" />
+                                        <div class="valid-feedback">
+                                            Ok!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Nome inválido.
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        
+                                        <div class="form-group col-md-6">
+                                            <label class="col-form-label" for="telefone">Telefone: </label>
+                                            <input class="form-control telefone" type="text" required inputmode="tel" pattern=".{13,14}" name="telefone1" id="telefone1" placeholder="(00)00000-0000" value="" />
+                                            <div class="invalid-feedback">
+                                                Telefone inválido.
+                                            </div>
+                                        </div>
+
+                                    <script type="text/javascript">
+
+                                        var SPMaskBehavior = function (val) {
+                                            return val.replace(/\D/g, '').length === 11 ? '(00)00000-0000' : '(00)0000-00000';
+                                        },
+                                                spOptions = {
+                                                    onKeyPress: function (val, e, field, options) {
+                                                        field.mask(SPMaskBehavior.apply({}, arguments), options);
+                                                    }
+                                                };
+
+                                        $('.telefone').mask(SPMaskBehavior, spOptions);
+
+                                    </script>
+
+                                        <div class="form-group col-md-6">
+                                            <label class="col-form-label" for="email">E-Mail: </label>
+                                            <input type="email" class="form-control" name="email" required id="email" placeholder="exemplo@meudominio.com" value="" pattern="[a-z0-9._%+-]{1,50}@[a-z0-9.-]{1,15}\.[a-z]{2,10}$" />
+                                            <div class="invalid-feedback">
+                                                E-mail inválido.
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    
+                                    <div class="form-group col-md-12">
+                                        <label class="col-form-label" for="message">Mensagem: </label>
+                                        <textarea name="message" maxlength="450" class="form-control" rows="4" placeholder="Deixe sua mensagem" required></textarea>
+                                        <div class="invalid-feedback">
+                                            Vocë deve preencher este campo (tamanho máximo 450 caracteres).
+                                        </div>
+                                        <span id="passwordHelpInline" class="form-text">
+                                            
+                                        </span>
+                                    </div>
+
+                                    <div style="margin: 0.5em 0 0.5em 0"><input type="submit" class="btn btn-success" value="Enviar"></div>
+
+                                </fieldset>
+
+                            </form>
+                            </div>
+                        </div>
                         <div class="row justify-content-between">
                             <div class="col-auto"><a href="tel:5537988434097"><i class="far fa-address-card"></i> Phone</a></div>
                             <div class="col-auto"><a href="mailto:thiagotuliobs@gmail.com"><i class="far fa-paper-plane"></i> E-mail</a></div>

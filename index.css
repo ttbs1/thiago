@@ -9,11 +9,12 @@ and open the template in the editor.
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500&display=swap');
 
 :root {
   --body-bg: radial-gradient(farthest-corner at 2% 2%, #ffffff, #fffafa, #f3f3f3, #f6f6f6, #f9f9f9, #e6e6e6);
   --body-color: #808080;
-  --link-color: #fff;
+  --link-color: #f3f3f3;
   --link-color-hover: orange;
   --card-color: #c0c0c0;
 }
@@ -27,11 +28,23 @@ and open the template in the editor.
 }
 
 .load {
-    //color:#fff;
-    font-size: 18px;
     padding-top: calc(50vh - 45px);
     height: calc(100vh - 50px);
     text-align: center;
+}
+
+.nav-item {
+    margin-left: 6px;
+}
+
+.nav-item:hover {
+    color: var(--link-color);
+    font-size: 1.05em;
+    border-bottom: solid;
+    border-color:  var(--link-color-hover);
+    //border-width: thin;
+    transition-duration: 1s;
+    text-shadow: 1px 1px var(--link-color-hover);
 }
 
 #inicio, #sobre, #trabalhos, #contato, #planos {
@@ -47,12 +60,25 @@ and open the template in the editor.
 }
 
 .floating-text {
-    padding: 4%;
+    padding: 2em;
     border-radius: 20px;
     text-align: justify;
-    background: rgba(245, 130, 32, 0.45);
-    background: rgba(105, 105, 105, 0.91);
-    //color: #fff;
+    background: rgba(105, 105, 105, 0.77);
+    color: var(--link-color);
+}
+
+
+.landing-text {
+    font-size: 1.4em;
+    padding: calc(15rem - 25vh) 2rem 0em 2rem;
+    text-align: center;
+    font-family: 'Grandstander', sans-serif !important;
+}
+
+a:hover .far, a:hover .fab {
+    transform: scale(1.5) translateX(-2px);
+    transition-duration: 1s;
+    color: var(--link-color-hover);
 }
 
 .content {
@@ -71,19 +97,11 @@ a {
 }
 
 a:hover {
-    color: var(--link-color-hover);
+    color: var(--link-color);
 }
 
 li {
     display: inline-block;
-}
-
-noTransformation {
-    -webkit-transform: none; /* Safari and Chrome */
-       -moz-transform: none; /* Firefox */
-        -ms-transform: none; /* IE 9 */
-         -o-transform: none; /* Opera */
-            transform: none;
 }
 
 .content.hide {
@@ -99,6 +117,7 @@ body {
     background-image: var(--body-bg);
     color: var(--body-color);
     font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
 }
 
 .navbar {
@@ -113,7 +132,7 @@ body {
 }
 
 .fas {
-    font-size: 18px;
+    //font-size: 18px;
     font-family: 'Roboto', sans-serif !important;
 }
 
@@ -156,7 +175,7 @@ body {
 .fas:hover #cart1 {
     transform: translateX(15px);
     opacity: 0;
-    transition-duration: 1.5s;
+    transition-duration: 1s;
 }
 
 .fas #cart2 {
@@ -166,8 +185,8 @@ body {
 .fas:hover #cart2 {
     color: var(--link-color-hover);
     transform: translateX(0px);
-    transition-delay: 1s;
-    transition-duration: 1.5s;
+    transition-delay: 0.6s;
+    transition-duration: 1s;
 }
 
 #inphone {
@@ -220,6 +239,11 @@ body {
 }
 
 /* DEMO-SPECIFIC STYLES */
+
+.typewriter-body {
+    margin-top: 15vh;
+}
+
 .typewriter h1 {
   color: var(--body-color);
   font-family: "Roboto";
