@@ -70,9 +70,23 @@ and open the template in the editor.
 
 .landing-text {
     font-size: 1.4em;
-    padding: calc(15rem - 25vh) 2rem 0em 2rem;
+    padding: 2em 2rem 0em 2rem;
     text-align: center;
     font-family: 'Grandstander', sans-serif !important;
+}
+
+input, textarea {
+    color: white;
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--link-color-hover);
+    resize: none;
+}
+
+.col-form-label {
+    color: var(--card-color);
 }
 
 a:hover .far, a:hover .fab {

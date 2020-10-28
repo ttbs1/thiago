@@ -185,7 +185,7 @@ and open the template in the editor.
 
                                     <div class="form-group col-md-12">
                                         <label class="col-form-label" for="name">Nome: </label>
-                                        <input class="form-control name" type="text" required name="name" id="name" placeholder="Nome" value="" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ][A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s*?]{3,50}" />
+                                        <input class="name" type="text" required name="name" id="name" placeholder="Nome" value="" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ][A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s*?]{3,50}" />
                                         <div class="valid-feedback">
                                             Ok!
                                         </div>
@@ -197,7 +197,7 @@ and open the template in the editor.
                                         
                                         <div class="form-group col-md-6">
                                             <label class="col-form-label" for="telefone">Telefone: </label>
-                                            <input class="form-control telefone" type="text" required inputmode="tel" pattern=".{13,14}" name="telefone1" id="telefone1" placeholder="(00)00000-0000" value="" />
+                                            <input class="telefone" type="text" required inputmode="tel" pattern=".{13,14}" name="telefone1" id="telefone1" placeholder="(00)00000-0000" value="" />
                                             <div class="invalid-feedback">
                                                 Telefone inválido.
                                             </div>
@@ -220,7 +220,7 @@ and open the template in the editor.
 
                                         <div class="form-group col-md-6">
                                             <label class="col-form-label" for="email">E-Mail: </label>
-                                            <input type="email" class="form-control" name="email" required id="email" placeholder="exemplo@meudominio.com" value="" pattern="[a-z0-9._%+-]{1,50}@[a-z0-9.-]{1,15}\.[a-z]{2,10}$" />
+                                            <input type="email" class="" name="email" required id="email" placeholder="exemplo@meudominio.com" value="" pattern="[a-z0-9._%+-]{1,50}@[a-z0-9.-]{1,15}\.[a-z]{2,10}$" />
                                             <div class="invalid-feedback">
                                                 E-mail inválido.
                                             </div>
@@ -230,16 +230,16 @@ and open the template in the editor.
                                     
                                     <div class="form-group col-md-12">
                                         <label class="col-form-label" for="message">Mensagem: </label>
-                                        <textarea name="message" maxlength="450" class="form-control" rows="4" placeholder="Deixe sua mensagem" required></textarea>
+                                        <textarea name="message" maxlength="450" class="" rows="4" placeholder="Deixe sua mensagem" required></textarea>
                                         <div class="invalid-feedback">
-                                            Vocë deve preencher este campo (tamanho máximo 450 caracteres).
+                                            Você deve preencher este campo (tamanho máximo 450 caracteres).
                                         </div>
                                         <span id="passwordHelpInline" class="form-text">
                                             
                                         </span>
                                     </div>
 
-                                    <div style="margin: 0.5em 0 0.5em 0"><input type="submit" class="btn btn-success" value="Enviar"></div>
+                                    <div style="margin: 0.5em 0 0.5em 0"><input type="submit" class="btn btn-warning" value="Enviar"></div>
 
                                 </fieldset>
 
