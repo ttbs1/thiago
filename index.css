@@ -13,7 +13,7 @@ and open the template in the editor.
 
 :root {
   --body-bg: radial-gradient(farthest-corner at 2% 2%, #ffffff, #fffafa, #f3f3f3, #f6f6f6, #f9f9f9, #e6e6e6);
-  --body-color: #808080;
+  --body-color: #3c3c3c;
   --link-color: #f3f3f3;
   --link-color-hover: orange;
   --card-color: #c0c0c0;
@@ -80,6 +80,7 @@ input, textarea {
     background: none;
     border: none;
     outline: none;
+    padding: 4px;
     border-bottom: 2px solid var(--link-color-hover);
     resize: none;
 }
