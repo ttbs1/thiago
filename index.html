@@ -32,6 +32,14 @@ and open the template in the editor.
         <script src="util/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="util/validationForm.js"></script>
         <script type="text/javascript" src="util/jquery.mask.js"></script>
+        
+        
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init("user_CggJsA9I6jfvbKOpxPsFL");
+            })();
+        </script>
 
 
     </head>
@@ -186,9 +194,6 @@ and open the template in the editor.
                                     <div class="form-group col-md-12">
                                         <label class="col-form-label" for="name">Nome: </label>
                                         <input class="name" type="text" required name="name" id="name" placeholder="Nome" value="" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ][A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s*?]{3,50}" />
-                                        <div class="valid-feedback">
-                                            Ok!
-                                        </div>
                                         <div class="invalid-feedback">
                                             Nome inválido.
                                         </div>
@@ -336,6 +341,53 @@ and open the template in the editor.
                 </div>
             </div>
         </main>
+
+        
+        <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Mensagem enviada! </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group col-md-8">
+                            Agradecemos pela mensagem, entraremos em contato assim que possível!
+                    </div>
+                    <div style="text-align: center;"><img src="util/confirma.png" height="175px" width="175px" /></div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Erro! </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group col-md-8">
+                            Ocorreu um erro ao enviar a mensagem, por favor, tente novamente mais tarde ou use outro canal de atendimento.
+                    </div>
+                    <div style="text-align: center;"><img src="util/delete.png" height="175px" width="175px" /></div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        
         
     </body>
 </html>

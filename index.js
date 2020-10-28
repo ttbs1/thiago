@@ -31,6 +31,11 @@ function getSizes() {
     planos.style.height = window.innerHeight - 50+"px";
     planos.style.display = "none";
     
+    var myModalEl = document.getElementById('confirmModal');
+    myModalEl.addEventListener('hidden.bs.modal', function (e) {
+        document.location.reload();
+    });
+    
 };
 
 function toggleHome () {
@@ -149,5 +154,20 @@ function switchDM () {
     else
         html[0].classList.remove("dark-mode");
 };
-
-
+            
+function sendMail () {
+    
+    emailjs.sendForm('service_lwfav9d', 'template_bhejc0n', '#contact-form').then(function(response) {
+       var modal = new bootstrap.Modal(document.getElementById('confirmModal'), {
+            keyboard: false
+        });
+        modal.show();
+    }, function(error) {
+       var modal = new bootstrap.Modal(document.getElementById('errorModal'), {
+            keyboard: false
+        });
+        modal.show();
+    });
+            
+    //document.getElementById("contact-form").reset();
+};
