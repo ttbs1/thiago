@@ -16,7 +16,7 @@ and open the template in the editor.
   --body-color: #3c3c3c;
   --link-color: #f3f3f3;
   --link-color-hover: orange;
-  --card-color: #c0c0c0;
+  --card-color: #4a4a4a;
 }
 
 .dark-mode:root {
@@ -38,13 +38,13 @@ and open the template in the editor.
 }
 
 .nav-item:hover {
-    color: var(--link-color);
-    font-size: 1.05em;
-    border-bottom: solid;
-    border-color:  var(--link-color-hover);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--link-color-hover);
+    color:  var(--link-color);
     //border-width: thin;
     transition-duration: 1s;
-    text-shadow: 1px 1px var(--link-color-hover);
+    text-shadow: 2px 2px var(--card-color);
 }
 
 #inicio, #sobre, #trabalhos, #contato, #planos {

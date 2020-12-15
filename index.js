@@ -65,6 +65,8 @@ function toggleAbout () {
     trabalhos.classList.add("hide");
     var contato = document.getElementById("contato");
     contato.classList.add("hide");
+    var planos = document.getElementById("planos");
+    planos.classList.add("hide");
     setTimeout(function () {
         contato.style.display = "none";
         trabalhos.style.display = "none";
@@ -86,6 +88,8 @@ function toggleJobs () {
     sobre.classList.add("hide");
     var contato = document.getElementById("contato");
     contato.classList.add("hide");
+    var planos = document.getElementById("planos");
+    planos.classList.add("hide");
     setTimeout(function () {
         contato.style.display = "none";
         sobre.style.display = "none";
