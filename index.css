@@ -17,6 +17,7 @@ and open the template in the editor.
   --link-color: #f3f3f3;
   --link-color-hover: orange;
   --card-color: #4a4a4a;
+  --table-striped: #d3d3d3;
 }
 
 .dark-mode:root {
@@ -25,6 +26,7 @@ and open the template in the editor.
   --link-color: #f3f3f3;
   --link-color-hover: orange;
   --card-color: #282828;
+  --table-striped: #4f4f4f;
 }
 
 .load {
@@ -342,4 +344,13 @@ Resources
     border-color: black;
 }
 
-/* FLIP CARD END  */
+/* FLIP CARD END */
+
+table {
+    margin-top: 50px;
+    color: var(--body-color) !important;
+}
+
+tr:nth-child(even) {
+  background-color: var(--table-striped);
+}
