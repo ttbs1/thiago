@@ -11,6 +11,11 @@ and open the template in the editor.
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@400;500&display=swap');
 
+h2 {
+    margin: 45px 0 15px 0;
+    color: orange;
+    font-weight: 900;
+}
 
 :root {
   --body-bg: radial-gradient(farthest-corner at 2% 2%, #ffffff, #fffafa, #f3f3f3, #f6f6f6, #f9f9f9, #e6e6e6);
