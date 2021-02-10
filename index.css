@@ -297,6 +297,11 @@ body {
     position: absolute;
 }
 
+#language {
+    width: 38px;
+    border-radius: 12px;
+}
+
 Resources
 
 
