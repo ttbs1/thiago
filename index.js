@@ -39,6 +39,9 @@ function getSizes() {
 };
 
 function toggleHome () {
+    var nav = document.getElementById("nav-mobile");
+    nav.style.display = "none";
+    
     var sobre = document.getElementById("sobre");
     sobre.classList.add("hide");
     var trabalhos = document.getElementById("trabalhos");
@@ -174,4 +177,17 @@ function sendMail () {
     });
             
     //document.getElementById("contact-form").reset();
+};
+
+function toggleMobileNav () {
+    var x = document.getElementById("nav-mobile");
+    if(window.getComputedStyle(x).display == "none") {
+        document.getElementById("planos").style.display = "none";
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+        var planos = document.getElementById("planos");
+        planos.classList.add("hide");
+        planos.style.display = "block";
+    }
 };

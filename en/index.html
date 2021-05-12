@@ -28,7 +28,7 @@ and open the template in the editor.
         
         
 
-        <script src="../util/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="../util/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
         <script type="text/javascript" src="../util/validationForm.js"></script>
         <script type="text/javascript" src="../util/jquery.mask.js"></script>
         
@@ -44,7 +44,7 @@ and open the template in the editor.
     </head>
     <body onload="getSizes();">
         <nav class="container-fluid navbar" id="navbar" style="background-color: #2b2b2b; height: 50px;">
-            <div class="row justify-content-between">
+            <div class="container-fluid flex-wrap flex-md-nowrap">
                 <div class="col-auto">
                     <a href="javascript:;" onclick="toggleHome()"><img src="../util/icon3.png" width="26" height="26"/></a>
                 </div>
@@ -65,8 +65,31 @@ and open the template in the editor.
                     </ul>
                 </div>
                 <div id="navbar-toggle" class="col-auto" style="text-align: right">
-                    navbar toggle
+                    <a class="nav-item" href="javascript:;" onclick="toggleMobileNav()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.6em" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2 10.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                    </a>
                 </div>
+            </div>
+        </nav>
+        
+        <nav id="nav-mobile" class="nav-mobile">
+            <div>
+                <ul>
+                    <li>
+                        <a class="nav-item" href="javascript:;" onclick="toggleMobileNav(); toggleAbout()">About</a>
+                    </li>
+                    <li>
+                        <a class="nav-item" href="javascript:;" onclick="toggleMobileNav(); toggleJobs()">Jobs</a>
+                    </li>
+                    <li>
+                        <a class="nav-item" href="javascript:;" onclick="toggleMobileNav(); toggleContact()">Contact</a>
+                    </li>
+                    <li>
+                        <a class="nav-item" href="javascript:;" onclick="toggleMobileNav(); togglePlans()">Plans</a>
+                    </li>
+                </ul>
             </div>
         </nav>
         
@@ -152,7 +175,7 @@ and open the template in the editor.
         <main id="sobre" class="container-fluid content">
             <div class="row justify-content-center">
                 <div class="col-auto">
-                    <h1>Sobre</h1><br>
+                    <h1>About</h1><br>
                     <div style="max-width: 740px; text-align: justify;">
                         &nbsp; &nbsp; &nbsp; &nbsp; Since 2011 studying IT, I was approved in UFMG at first, where I studyied until 2013. After a few years working as a administrative assistant, I finally got back studying, and in 2016 I joined the computer science course on UNIFOR-MG, where I bacame graduated in the end of 2019. I did some jobs as a freelancer and kept working with web applications in a local company SIGLA, where I started as an intern in 2019, and now I work as freelancer as well. I currently work with simple pages (sites), web applications with management purposes, besides some more <a href="javascript:;" onclick="toggleJobs()" style="color:orange">jobs</a>. <br><br>
                     </div>

@@ -24,6 +24,7 @@ h2 {
   --link-color-hover: orange;
   --card-color: #4a4a4a;
   --table-striped: #d3d3d3;
+  --nav-mobile: #c8c8c8;
 }
 
 .dark-mode:root {
@@ -33,6 +34,7 @@ h2 {
   --link-color-hover: orange;
   --card-color: #282828;
   --table-striped: #4f4f4f;
+  --nav-mobile: #353535;
 }
 
 .load {
@@ -293,7 +295,7 @@ body {
 }
 
 #dark-mode-switch {
-    margin: 6px;
+    margin: 8px 0 0 18px;
     position: absolute;
 }
 
@@ -365,4 +367,29 @@ table {
 
 tr:nth-child(even) {
   background-color: var(--table-striped);
+}
+
+.nav-mobile {
+    display: none;
+    height: calc(100vh - 50px);
+    width: 100vw;
+    background-color: var(--nav-mobile);
+    text-align: center;
+    font-size: 1.6em;
+    position: absolute;
+    padding-top: 32vh;
+    //transition: opacity 2s linear;
+}
+
+.nav-mobile a {
+    color: var(--link-color-hover);
+}
+
+.nav-mobile li {
+    display: block;
+    padding-bottom: 12px;
+}
+
+.nav-mobile ul {
+    padding-left: 0;
 }
